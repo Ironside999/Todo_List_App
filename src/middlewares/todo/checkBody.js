@@ -12,3 +12,12 @@ module.exports = (req, res, next) => {
   }
   next();
 };
+
+/*
+    USAGE:
+    1. Comment allowNull: false in Todo model
+    2. Write This Middleware Function
+    3. Import It in Todo Route
+    4. Use it Without () as an Argument in router.post() like this
+    router.post('/api/todo', checkBody, catchAsync(async(req, res, next)) => {...})
+*/
