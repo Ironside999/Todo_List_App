@@ -1,0 +1,42 @@
+###Create New TODO
+###You Should Provide "category_id" && "title"
+###Status is Optional BUT It Can Olny Have "done" OR "pending" As Value 
+POST http://localhost:5000/api/todo
+Content-Type: application/json
+
+{
+    "category_id":1,
+    "title":"fffffff todo",
+    "status":"done"
+}
+
+
+###Get All TODOs
+###You Can Set "limit" && "offset"
+###Else "limit=10" && "offset=0"
+GET http://localhost:5000/api/todo
+
+
+###Get Single TODO By ID
+###Error Return If Id NOT Found
+### Category Joined To TODO Table
+GET http://localhost:5000/api/todo/15
+
+
+###Delete TODO By ID
+###If TODO Not Found You Get an Error else TODO deletes
+DELETE http://localhost:5000/api/todo/12
+
+
+###Update TODO By ID
+###It Is Partial Update(You Are Not Force To Update All Columns)
+###If You Do Not Provide Any Body TODO Does Not Change
+### If You Try To Update "createdAt" OR "updatedAt" OR "id" Just Waste Your Time (Dear MALICIOUS USER)
+### You Can Just Update "title" && "status" Both OR One Of Them
+PATCH http://localhost:5000/api/todo/6
+Content-Type: application/json
+
+{
+    "title": "updated",
+    "status": "pending"
+}

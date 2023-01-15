@@ -1,0 +1,9 @@
+#npm packages
+node_modules
+
+#.env file
+# config.env
+
+#sequelize-cli config and seeders
+# config
+# seeders

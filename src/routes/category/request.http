@@ -1,0 +1,11 @@
+###Get All Categories
+GET http://localhost:5000/api/category
+
+
+###Create Category
+POST http://localhost:5000/api/category
+Content-Type: application/json
+
+{
+    "title": "FirstCategory"
+}

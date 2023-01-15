@@ -1,0 +1,25 @@
+{
+  "name": "zitron-task",
+  "version": "1.0.0",
+  "description": "This is a TODO LIST using express as a node.js framework & sequelize as an ORM & mysql as the dialect of ORM",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx sequelize-cli db:seed:undo & sequelize-cli db:seed:all & nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammad Esfandiari",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.5.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "http": "^0.0.1-security",
+    "mysql2": "^3.0.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.28.0"
+  }
+}
